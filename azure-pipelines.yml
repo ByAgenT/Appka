@@ -31,8 +31,8 @@ steps:
      az appservice plan create --name $appServiceName --resource-group $rgName --sku FREE
      az webapp create --name $webAppName --resource-group $rgName --plan $appServiceName
     env:
-      rgName: appResourceGroup
-      appServiceName: newAppService
+      rgName: 'appResourceGroup'
+      appServiceName: 'newAppService'
       webAppName: $(webAppName)
 
 - task: AzureRmWebAppDeployment@4
